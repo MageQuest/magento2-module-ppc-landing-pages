@@ -1,0 +1,26 @@
+{
+    "name": "magequest/magento2-module-ppc-landing-pages",
+    "description": "A Magento 2 module that allows for creating discrete PDP (Product Detail Pages) page layouts for customers landing on the site from a PPC (Pay Per Click) link/ad by allowing routing to the same pages using a `/ppc/` prefix in the URL path.",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "magento/module-config": "^101.2",
+        "magento/module-store": "^101.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MageQuest",
+            "email": "hello@magequest.io",
+            "homepage": "https://www.magequest.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MageQuest\\PpcLandingPages\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
