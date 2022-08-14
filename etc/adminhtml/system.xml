@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageQuest - https://magequest.io
+ * Copyright © MageQuest. All rights reserved.
+ * See LICENSE.md file for details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="ppc_landing_page"
+                   translate="label"
+                   type="text"
+                   sortOrder="1000"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>PPC Landing Pages</label>
+                <field id="enabled"
+                       type="select"
+                       translate="label"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       canRestore="1">
+                    <label>Enable PPC Landing Page Functionality</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="override_meta_robots"
+                       type="select"
+                       translate="label"
+                       sortOrder="20"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       canRestore="1">
+                    <label>Override Search Engine Robots</label>
+                    <comment>This will overwrite the default value included before the head closing tag in page HTML for all PPC landing pages.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="meta_robots"
+                       type="select"
+                       translate="label comment"
+                       sortOrder="30"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       canRestore="1">
+                    <label>Search Engine Robots Value</label>
+                    <source_model>Magento\Config\Model\Config\Source\Design\Robots</source_model>
+                    <depends>
+                        <field id="override_meta_robots">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

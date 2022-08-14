@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageQuest - https://magequest.io
+ * Copyright © MageQuest. All rights reserved.
+ * See LICENSE.md file for details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <ppc_landing_page>
+                <enabled>1</enabled>
+                <override_meta_robots>1</override_meta_robots>
+                <meta_robots>NOINDEX,NOFOLLOW</meta_robots>
+            </ppc_landing_page>
+        </catalog>
+    </default>
+</config>
